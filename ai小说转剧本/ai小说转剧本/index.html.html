@@ -91,7 +91,7 @@
     <div class="card">
         <h1>小说片段转剧本</h1>
         <textarea id="novelInput" placeholder="请输入小说片段（500字以内）"></textarea>
-        <div class="tip">最多输入500个字符</div>
+        <div class="tip">最多输入2000个字符</div>
         <button id="convertBtn">转换为剧本</button>
     </div>
 
@@ -115,8 +115,8 @@
             }
 
             btn.disabled = true;
-            btn.textContent = '正在生成剧本，请稍候（约需15秒）...'
-            result.textContent = '⏳ 正在调用AI生成剧本，请稍候...';
+            btn.textContent = '正在生成剧本，请稍候（约需10-15秒）...'
+            result.textContent = '⏳ 正在生成剧本，请稍候...';
 
             try {
                 const res = await fetch('http://localhost:5000/convert', {
